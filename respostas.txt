@@ -1,0 +1,7 @@
+1) Isso causaria problemas em outras partes do sistema que já usam o método extrato() e esperam receber texto puro, pois elas passariam a receber HTML.
+
+2) Qualquer mudança nas regras exigiria alterar a classe que representa um cliente, e não um preço. Isso significa que toda vez que uma regra mudar, a classe client também precisaria ser alterada.
+
+3) Alterar a classificação de uma fita afetaria diretamente o cálculo dentro do cliente. Se uma fita mudar de normal para lançamento no meio da semana o cálculo mudaria silenciosamente, sem controle sobre quando e como isso afeta os aluguéis em andamento.
+
+4) Qualquer mudança na regra de pontos exigiria alterar o mesmo método que já concentra todas as outras responsabilidades, o que aumenta o risco de introduzir erros nas partes de cálculo ou formatação que não deveriam ser alteradas.
