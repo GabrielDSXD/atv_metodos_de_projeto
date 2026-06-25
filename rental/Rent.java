@@ -1,18 +1,25 @@
 public class Rent {
-  private Tape Tape;
-  private int diasAlugada;
+    private Tape tape;
+    private int diasAlugada;
 
-  public Rent(Tape Tape, int diasAlugada) {
-    this.Tape = Tape;
-    this.diasAlugada = diasAlugada;
-  }
+    public Rent(Tape tape, int diasAlugada) {
+        this.tape      = tape;
+        this.diasAlugada = diasAlugada;
+    }
 
-  public Tape getTape() {
-    return Tape;
-  }
+    public Tape getTape() {
+        return tape;
+    }
 
-  public int getDiasAlugada() {
-    return diasAlugada;
-  }
+    public int getDiasAlugada() {
+        return diasAlugada;
+    }
+
+    public double getValor() {
+        return tape.getValor(diasAlugada);
+    }
+
+    public int getPontosBonus() {
+        return tape.getPontosBonus(diasAlugada);
+    }
 }
-
